@@ -4,6 +4,8 @@
 
 ## 1~5주차: Elixir Getting Started
 
+아래 내용은 [Elixir Getting Started](https://hexdocs.pm/elixir/introduction.html)에 있습니다.
+
 ### 1주차: 함수형 기초
 
 Getting Started: Introduction, Basic Types, Pattern Matching
@@ -35,6 +37,8 @@ Getting Started: IO and the File System, Mix and OTP (심화)
 과제: GenServer 기반 저장소, PubSub 브로드캐스트
 
 ## 6~8주차: Phoenix Guides
+
+아래 내용은 [Phoenix](https://hexdocs.pm/phoenix/overview.html)에 있습니다.
 
 ### 6주차: Phoenix 구조와 LiveView 입문
 
