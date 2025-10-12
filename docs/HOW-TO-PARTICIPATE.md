@@ -7,5 +7,5 @@
     1. 원하는 위치에 [포크한 리포지토리를 클론(clone)](https://docs.github.com/ko/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#cloning-your-forked-repository)받습니다.
     1. [업스트림을 구성](https://docs.github.com/ko/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#configuring-git-to-sync-your-fork-with-the-upstream-repository)합니다.
 1. 적절한 분기(branch)를 사용합니다. 포크한 리포지토리는 원본 리포지토리와 독립적이기 때문에 `master` 분기를 사용해도 무방합니다.
-2. 선택한 분기로 원하는 변경사항을 적절히 푸시(Push)합니다.
-3. [업스트림으로 끌어오기 요청(Pull Request)을 생성](https://docs.github.com/ko/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)합니다.
+2. 선택한 분기로 원하는 변경사항을 적절히 푸시(push)합니다.
+3. [업스트림으로 끌어오기 요청(pull request)을 생성](https://docs.github.com/ko/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)합니다.
