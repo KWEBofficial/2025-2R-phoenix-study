@@ -1,5 +1,8 @@
 # 참여 방법
 
+어느정도 GitHub과 Git에 대한 사전지식이 있다는 것을 가정하고 작성되어 있습니다.
+아닌 경우, [GitHub Hello World](https://docs.github.com/ko/get-started/start-your-journey/hello-world)를 참고하세요.
+
 ## PR 만들기
 
 0. 로컬 개발환경 구성하기
