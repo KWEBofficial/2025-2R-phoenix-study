@@ -12,3 +12,7 @@
 1. 적절한 분기(branch)를 사용합니다. 포크한 리포지토리는 원본 리포지토리와 독립적이기 때문에 `master` 분기를 사용해도 무방합니다.
 2. 선택한 분기로 원하는 변경사항을 적절히 푸시(push)합니다.
 3. [업스트림으로 끌어오기 요청(pull request)을 생성](https://docs.github.com/ko/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)합니다.
+
+## 참고자료
+
+이 문서는 [nixpkgs/CONTRIBUTING.md](https://github.com/NixOS/nixpkgs/blob/master/CONTRIBUTING.md)를 참고하여 작성했습니다.
