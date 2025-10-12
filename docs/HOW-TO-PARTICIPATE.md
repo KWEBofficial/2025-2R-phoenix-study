@@ -13,6 +13,6 @@
 2. 선택한 분기로 원하는 변경사항을 적절히 푸시(push)합니다.
 3. [업스트림으로 끌어오기 요청(pull request)을 생성](https://docs.github.com/ko/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)합니다.
 
-## 참고자료
+## 비고
 
 이 문서는 [nixpkgs/CONTRIBUTING.md](https://github.com/NixOS/nixpkgs/blob/master/CONTRIBUTING.md)를 참고하여 작성했습니다.
