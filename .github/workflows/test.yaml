@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: collect
         run: |
-          PROJECTS=$(find . -type f -name mix.exs -not -path "*/_template/*" -printf "%h\n" | jq -R | jq -s)
+          PROJECTS=$(find . -type f -name mix.exs -not -path "*/_template/*" -printf "%h\n" | jq -R | jq -s -c)
 
           echo "projects=$PROJECTS" >> "$GITHUB_OUTPUT"
   test:
