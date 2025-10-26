@@ -27,7 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.prepare.outputs.projects) }}
+      matrix:
+        project: ${{ fromJson(needs.prepare.outputs.projects) }}
     defaults:
       run:
         working-directory: ${{ matrix.project }}
