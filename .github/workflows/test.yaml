@@ -14,6 +14,7 @@ jobs:
     outputs:
       projects: ${{ steps.collect.outputs.projects }}
     steps:
+      - uses: actions/checkout@v4
       - id: collect
         run: |
           PROJECTS=$(find . -type f -name mix.exs -not -path "*/_template/*" -printf "%h\n" | jq -R | jq -s)
@@ -36,4 +37,3 @@ jobs:
           otp-version: '27'
       - name: Run tests
         run: mix test
-
