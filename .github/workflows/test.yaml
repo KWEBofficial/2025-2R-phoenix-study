@@ -13,21 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          mapfile -t PROJECTS < <(
-            find "." \
-              -type f -name mix.exs \
-              -not -path "*/_template/*" \
-              -not -path "*/deps/*" \
-              -not -path "*/_build/*" \
-              -not -path "*/.git/*" \
-              -printf '%h\n' \
-            | sort -u
-          )
+          PROJECTS=$(find . -type f -name mix.exs -not -path "*/_template/*" -printf "%h\n" | jq -R | jq -s)
 
-          json=$(printf '%s\n' "${PROJECTS[@]}" | jq -R . | jq -s .)
-          echo "Found projects: ${json}"
-
-          echo "projects=${json}" >> "$GITHUB_OUTPUT"
+          echo "projects=$PROJECTS" >> "$GITHUB_OUTPUT"
   test:
     runs-on: ubuntu-latest
     strategy:
