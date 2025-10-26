@@ -20,6 +20,8 @@ jobs:
           PROJECTS=$(find . -type f -name mix.exs -not -path "*/_template/*" -printf "%h\n" | jq -R | jq -s -c)
 
           echo "projects=$PROJECTS" >> "$GITHUB_OUTPUT"
+      - run: |
+          echo "${{ steps.collect.outputs.projects }}"
   test:
     needs: prepare
     runs-on: ubuntu-latest
