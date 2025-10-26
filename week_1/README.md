@@ -8,6 +8,6 @@
 
   ![failure](./assets/failure.png)
 
-- 이번 주의 영역을 학습한 후 test가 성공하게 만들어서 PR로 제출해주세요
+- 이번 주의 영역을 학습한 후 본인의 GitHub ID로 되어있는 디렉토리에서 test가 성공하게 만들어서 PR로 제출해주세요
 
   ![success](./assets/success.png)
