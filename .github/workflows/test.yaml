@@ -1,0 +1,42 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      projects: ${{ steps.collect.outputs.projects }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: collect
+        run: |
+          PROJECTS=$(find . -type f -name mix.exs -not -path "*/_template/*" -printf "%h\n" | jq -R | jq -s -c)
+
+          echo "projects=$PROJECTS" >> "$GITHUB_OUTPUT"
+      - run: |
+          echo "${{ steps.collect.outputs.projects }}"
+  test:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJson(needs.prepare.outputs.projects) }}
+    defaults:
+      run:
+        working-directory: ${{ matrix.project }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: erlef/setup-beam@v1
+        with:
+          elixir-version: '1.18'
+          otp-version: '27'
+      - name: Run tests
+        run: mix test
