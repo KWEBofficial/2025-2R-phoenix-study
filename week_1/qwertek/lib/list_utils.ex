@@ -1,8 +1,8 @@
 defmodule ListUtils do
   def my_length(_list) do
     case _list do
-      nil -> false
-      _ -> length(_list)
+      [] -> 0
+      [head | tail] -> 1 + my_length(tail)
     end
   end
 end
