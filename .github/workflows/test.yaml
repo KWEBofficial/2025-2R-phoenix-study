@@ -17,6 +17,7 @@ jobs:
 
           echo "projects=$PROJECTS" >> "$GITHUB_OUTPUT"
   test:
+    needs: prepare
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
