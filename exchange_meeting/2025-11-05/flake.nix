@@ -7,6 +7,8 @@
 
     press.url = "github:RossSmyth/press";
     typst-live.url = "github:ItsEthra/typst-live";
+
+    beleap-fonts.url = "github:BeLeap/nix-fonts";
   };
 
   outputs =
@@ -16,19 +18,26 @@
       flake-utils,
       press,
       typst-live,
+      beleap-fonts,
     }:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ (import press) ];
+          overlays = [
+            (import press)
+            (import beleap-fonts)
+          ];
         };
       in
       rec {
         packages.default = pkgs.buildTypstDocument {
           name = "main";
           src = ./.;
+          fonts = with pkgs; [
+            nanum-myeongjo
+          ];
 
           typstEnv = p: [ p.polylux ];
         };
