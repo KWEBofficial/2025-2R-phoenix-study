@@ -29,6 +29,8 @@
         packages.default = pkgs.buildTypstDocument {
           name = "main";
           src = ./.;
+
+          typstEnv = p: [ p.polylux ];
         };
         devShells.default = pkgs.mkShell {
           inputsFrom = [ packages.default ];

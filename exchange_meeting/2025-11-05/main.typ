@@ -1,3 +1,10 @@
-= Lorem Ipsum
+#import "@preview/polylux:0.4.0": *
 
-Dolor Sit
+#set page(paper: "presentation-16-9")
+#set text(size: 25pt)
+
+#slide[
+  = Phoenix
+
+  2025-11-05
+]
