@@ -15,7 +15,7 @@
   - https://github.com/KWEBofficial/2025-2R-phoenix-study
     - PR로 주차별 과제 제출
     - PR에서 테스트 수행
-    - #link("https://github.com/KWEBofficial/2025-2R-phoenix-study/pull/14")[PR 링크]
+    - 예시: #link("https://github.com/KWEBofficial/2025-2R-phoenix-study/pull/14")[PR\#14]
 ]
 
 #slide[
