@@ -8,7 +8,7 @@
     press.url = "github:RossSmyth/press";
     typst-live.url = "github:ItsEthra/typst-live";
 
-    beleap-fonts.url = "github:BeLeap/nix-fonts";
+    beleap-overlay.url = "github:BeLeap/nix-overlay";
   };
 
   outputs =
@@ -18,7 +18,7 @@
       flake-utils,
       press,
       typst-live,
-      beleap-fonts,
+      beleap-overlay,
     }:
     flake-utils.lib.eachDefaultSystem (
       system:
@@ -27,7 +27,7 @@
           inherit system;
           overlays = [
             (import press)
-            (import beleap-fonts)
+            (import beleap-overlay)
           ];
         };
       in

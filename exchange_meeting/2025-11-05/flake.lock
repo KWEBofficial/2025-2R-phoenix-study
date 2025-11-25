@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "beleap-fonts": {
+    "beleap-overlay": {
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
@@ -9,13 +9,13 @@
         "lastModified": 1762273495,
         "narHash": "sha256-7ooksYRjKlZn3MIAzBQKbsqbIl7bew38VPlDKusF9LQ=",
         "owner": "BeLeap",
-        "repo": "nix-fonts",
+        "repo": "nix-overlay",
         "rev": "fcba28437b1aa38cd1024c2e4f77924e6b2c3f00",
         "type": "github"
       },
       "original": {
         "owner": "BeLeap",
-        "repo": "nix-fonts",
+        "repo": "nix-overlay",
         "type": "github"
       }
     },
@@ -160,7 +160,7 @@
     },
     "root": {
       "inputs": {
-        "beleap-fonts": "beleap-fonts",
+        "beleap-overlay": "beleap-overlay",
         "flake-utils": "flake-utils_2",
         "nixpkgs": "nixpkgs_2",
         "press": "press",
